@@ -1,0 +1,56 @@
+/**
+ * Kamba-Dyami Cocktail — Design Tokens
+ * Dark luxury com energia africana contemporânea.
+ */
+
+:root {
+  /* Cores da marca */
+  --color-obsidian: #0a0a0f;
+  --color-gold-kamba: #d4a017;
+  --color-amber: #f0a500;
+  --color-coral-angola: #e8501a;
+  --color-teal-ilha: #00b4a6;
+  --color-purple-night: #6b21a8;
+  --color-cream: #f5f0e8;
+  --color-smoke: #1a1a24;
+  --color-mist: #2d2d3e;
+  --color-red-angola: #cc0000;
+
+  /* Semânticos */
+  --background: var(--color-obsidian);
+  --foreground: var(--color-cream);
+  --surface: var(--color-smoke);
+  --border: var(--color-mist);
+  --accent-primary: var(--color-coral-angola);
+  --accent-secondary: var(--color-teal-ilha);
+  --accent-gold: var(--color-gold-kamba);
+
+  /* Ritmo de animação */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 0.2s;
+  --duration-base: 0.4s;
+  --duration-slow: 0.6s;
+}
+
+@theme inline {
+  --color-obsidian: var(--color-obsidian);
+  --color-gold-kamba: var(--color-gold-kamba);
+  --color-amber: var(--color-amber);
+  --color-coral-angola: var(--color-coral-angola);
+  --color-teal-ilha: var(--color-teal-ilha);
+  --color-purple-night: var(--color-purple-night);
+  --color-cream: var(--color-cream);
+  --color-smoke: var(--color-smoke);
+  --color-mist: var(--color-mist);
+  --color-red-angola: var(--color-red-angola);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+
+  --font-display: var(--font-cormorant), serif;
+  --font-body: var(--font-dm-sans), sans-serif;
+  --font-utility: var(--font-jetbrains-mono), monospace;
+  --font-accent: var(--font-dancing-script), cursive;
+}
