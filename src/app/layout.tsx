@@ -8,6 +8,7 @@ import {
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { WhatsAppFloatButton } from "@/components/shared/WhatsAppFloatButton";
 import { SITE_CONFIG } from "@/constants/config";
 
 const cormorant = Cormorant_Garamond({
@@ -68,6 +69,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </main>
         <Footer />
+        <WhatsAppFloatButton />
       </body>
     </html>
   );
