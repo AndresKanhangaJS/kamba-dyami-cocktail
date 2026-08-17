@@ -14,6 +14,17 @@
   }
 }
 
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes float-particle {
   0%,
   100% {
@@ -35,6 +46,21 @@
   }
 }
 
+@keyframes glass-fill {
+  0% {
+    transform: scaleY(0);
+  }
+  45% {
+    transform: scaleY(1);
+  }
+  65% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
 @keyframes count-up-pop {
   from {
     opacity: 0;
@@ -50,8 +76,18 @@
   animation: fade-in-up var(--duration-slow) var(--ease-out) both;
 }
 
+.animate-fade-in-down {
+  animation: fade-in-down var(--duration-slow) var(--ease-out) both;
+}
+
 .animate-float {
   animation: float-particle 6s ease-in-out infinite;
+}
+
+.animate-glass-fill {
+  transform-box: fill-box;
+  transform-origin: bottom;
+  animation: glass-fill 3.2s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
