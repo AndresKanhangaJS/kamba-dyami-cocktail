@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Cocktail } from "@/types/cocktail.types";
 import { CATEGORIES } from "@/constants/categories";
 import { formatAOA } from "@/lib/utils/format";
@@ -21,12 +22,18 @@ export function CocktailCard({ cocktail }: { cocktail: Cocktail }) {
       href={`/menu/${cocktail.slug}`}
       className="group relative flex h-80 flex-col justify-end overflow-hidden rounded-2xl border border-mist transition-all duration-200 ease-out hover:scale-[1.03] hover:border-coral-angola"
     >
+      <Image
+        src={cocktail.images[0].src}
+        alt={cocktail.images[0].alt}
+        fill
+        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+        className="object-cover transition-transform duration-300 group-hover:scale-105"
+      />
       <div
         aria-hidden="true"
         className="absolute inset-0"
         style={{
-          background:
-            "linear-gradient(160deg, var(--color-smoke) 0%, var(--color-purple-night) 140%)",
+          background: "linear-gradient(180deg, transparent 30%, var(--color-obsidian) 95%)",
         }}
       />
 

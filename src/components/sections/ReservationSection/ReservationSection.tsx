@@ -37,9 +37,10 @@ export function ReservationSection() {
         </h2>
         <p className="font-body text-sm text-cream/70">
           Obrigado, {confirmedReservation.name}. Entraremos em contacto por email ou telefone
-          para confirmar a tua reserva de {confirmedReservation.guests}{" "}
-          {confirmedReservation.guests === 1 ? "pessoa" : "pessoas"} no dia{" "}
-          {confirmedReservation.date} às {confirmedReservation.time}.
+          para confirmar o teu evento com {confirmedReservation.guests}{" "}
+          {confirmedReservation.guests === 1 ? "convidado" : "convidados"} em{" "}
+          {confirmedReservation.location}, no dia {confirmedReservation.date} às{" "}
+          {confirmedReservation.time}.
         </p>
       </ScrollReveal>
     );
@@ -68,11 +69,17 @@ export function ReservationSection() {
         />
         <Input
           type="number"
-          label="Número de pessoas"
+          label="Número de convidados"
           min={1}
           max={20}
           error={errors.guests?.message}
           {...register("guests")}
+        />
+        <Input
+          label="Local do evento"
+          placeholder="Endereço, sala de festas, jardim..."
+          error={errors.location?.message}
+          {...register("location")}
         />
         <Input
           type="date"
@@ -108,7 +115,7 @@ export function ReservationSection() {
 
       <Input
         label="Ocasião (opcional)"
-        placeholder="Aniversário, encontro, celebração..."
+        placeholder="Aniversário, casamento, evento corporativo..."
         error={errors.occasion?.message}
         {...register("occasion")}
       />
@@ -120,7 +127,7 @@ export function ReservationSection() {
         <textarea
           id="special_requests"
           rows={4}
-          placeholder="Alergias, preferências de mesa, celebrações especiais..."
+          placeholder="Alergias, tema do evento, pedidos especiais..."
           className={cn(selectClasses, "h-auto resize-none py-3")}
           {...register("special_requests")}
         />

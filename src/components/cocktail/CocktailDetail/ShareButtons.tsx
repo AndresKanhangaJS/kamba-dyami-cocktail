@@ -16,7 +16,7 @@ export function ShareButtons({ name }: { name: string }) {
   const whatsappHref =
     typeof window === "undefined"
       ? "#"
-      : `https://wa.me/?text=${encodeURIComponent(`${name} — Kamba-Dyami Cocktail: ${window.location.href}`)}`;
+      : `https://wa.me/?text=${encodeURIComponent(`${name}, Kamba-Dyami Cocktail: ${window.location.href}`)}`;
 
   return (
     <div className="flex items-center gap-2 border-t border-mist pt-4">

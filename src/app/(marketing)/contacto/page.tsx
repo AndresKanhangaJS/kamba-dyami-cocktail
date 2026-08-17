@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Clock, Instagram, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Clock, Instagram, Mail, MapPin, MessageCircle, Phone, Truck } from "lucide-react";
 import { ContactForm } from "./ContactForm";
 
 export const metadata: Metadata = {
   title: "Contacto",
   description:
-    "Fala com o Kamba-Dyami Cocktail: localização, horário e contactos em Luanda, Angola.",
+    "Fala com o Kamba-Dyami Cocktail: área de atuação, disponibilidade e contactos em Luanda, Angola.",
 };
 
 const INFO_ITEMS = [
-  { icon: MapPin, label: "Localização", value: "Ilha de Luanda, Luanda, Angola" },
-  { icon: Clock, label: "Horário", value: "Terça a Domingo · 18h00 – 02h00" },
+  { icon: MapPin, label: "Área de Atuação", value: "Luanda e arredores" },
+  { icon: Clock, label: "Disponibilidade", value: "Todos os dias, mediante marcação" },
   { icon: Phone, label: "Telefone", value: "+244 900 000 000" },
   { icon: Mail, label: "Email", value: "contacto@kamba-dyami.ao" },
   { icon: Instagram, label: "Instagram", value: "@kambadyamicocktail" },
@@ -25,7 +25,7 @@ export default function ContactoPage() {
           Contacto
         </h1>
         <p className="mx-auto mt-3 max-w-xl font-body text-cream/70">
-          Dúvidas, eventos privados ou só para dizer olá — estamos por aqui.
+          Dúvidas, orçamentos ou só para dizer olá. Estamos por aqui, prontos para o teu evento.
         </p>
       </div>
 
@@ -39,8 +39,8 @@ export default function ContactoPage() {
                 "linear-gradient(160deg, var(--color-smoke) 0%, var(--color-purple-night) 140%)",
             }}
           >
-            <MapPin size={32} className="text-gold-kamba" />
-            <p className="font-body text-sm text-cream/70">Ilha de Luanda, Angola</p>
+            <Truck size={32} className="text-gold-kamba" />
+            <p className="font-body text-sm text-cream/70">Levamos o Kamba-Dyami até ao teu evento</p>
           </div>
 
           <ul className="flex flex-col gap-5">

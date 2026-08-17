@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { cocktails } from "@/data/cocktails";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { AnimatedNumber } from "@/components/shared/AnimatedText";
@@ -15,6 +16,16 @@ export function FeaturedCocktailSection() {
       }}
     >
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 text-center">
+        <ScrollReveal className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-cream/20 shadow-lg">
+          <Image
+            src={featured.images[0].src}
+            alt={featured.images[0].alt}
+            fill
+            sizes="160px"
+            className="object-cover"
+          />
+        </ScrollReveal>
+
         <ScrollReveal>
           <p className="font-utility text-xs uppercase tracking-[0.3em] text-cream/80">
             Cocktail do Mês

@@ -9,7 +9,7 @@ import { ParallaxSection } from "@/components/shared/ParallaxSection";
 export const metadata: Metadata = {
   title: "Nossa História",
   description:
-    "Conhece a história do Kamba-Dyami Cocktail: raízes de Luanda, cultura Kimbundu e a filosofia por trás de cada copo.",
+    "Conhece a história do Kamba-Dyami Cocktail: uma conversa entre amigos, cultura Kimbundu e a filosofia por trás de cada copo.",
 };
 
 const VALUES = [
@@ -17,13 +17,13 @@ const VALUES = [
     icon: HeartHandshake,
     title: "Amizade de Verdade",
     description:
-      "Kamba-Dyami significa amigo do peito. Cada mesa é tratada como a de um amigo, não a de um cliente.",
+      "Kamba-Dyami significa amigo do peito. Tratamos cada convidado como tratamos os nossos amigos, não como clientes.",
   },
   {
     icon: Leaf,
     title: "Raízes Angolanas",
     description:
-      "Mukua, gindungo, mel da Humpata, caju — os nossos ingredientes contam a história da terra.",
+      "Mukua, gindungo, mel da Humpata, caju: os nossos ingredientes contam a história da terra.",
   },
   {
     icon: Sparkles,
@@ -60,19 +60,22 @@ export default function SobrePage() {
           <ScrollReveal>
             <h2 className="font-display text-3xl font-semibold text-cream">Nossa História</h2>
             <p className="mt-4 font-body leading-relaxed text-cream/80">
-              O Kamba-Dyami nasceu na Ilha de Luanda, entre o som das ondas e as cores de um
-              entardecer angolano. O nome vem do Kimbundu — o amigo do peito, aquele com quem
-              partilhas os momentos que ficam. Foi com esse espírito que decidimos abrir um lugar
-              onde cada cocktail carrega uma parte da nossa cultura.
+              O Kamba-Dyami nasceu de uma conversa entre dois amigos, copo na mão, a imaginar
+              como seria levar os sabores de Angola a cada festa e celebração. O nome vem do
+              Kimbundu: o amigo do peito, aquele com quem partilhas os momentos que ficam. Foi
+              com esse espírito que decidimos criar um serviço de cocktails que viaja até onde a
+              festa acontece.
             </p>
             <p className="mt-4 font-body leading-relaxed text-cream/80">
-              Não somos um bar europeu importado para Angola. Somos Luanda, à noite: os panos
-              tradicionais que inspiram os nossos padrões, os frutos como o mukua e o caju que
-              reinventam clássicos internacionais, e a música que nunca para de tocar ao fundo.
+              Não trazemos um conceito europeu importado para Angola. Levamos Luanda contigo,
+              esteja o teu evento numa sala de festas, num jardim ou em tua casa: os panos
+              tradicionais que inspiram os nossos padrões, frutos como o mukua e o caju que
+              reinventam clássicos internacionais, e a energia que não para em cada celebração.
             </p>
             <p className="mt-4 font-body leading-relaxed text-cream/80">
-              Cada receita da nossa carta começou como uma conversa entre amigos — sobre memória,
-              sabor e lugar. É essa conversa que continua em cada copo que servimos.
+              Cada receita da nossa carta começou naquela conversa entre amigos, sobre memória,
+              sabor e lugar. É essa conversa que continua em cada copo que preparamos, esteja o
+              teu evento onde estiver.
             </p>
           </ScrollReveal>
         </div>
@@ -134,9 +137,9 @@ export default function SobrePage() {
 
       <section className="px-6 pb-24 text-center">
         <ScrollReveal>
-          <p className="font-accent text-2xl text-teal-ilha">Vem sentir</p>
+          <p className="font-accent text-2xl text-teal-ilha">Vamos já?</p>
           <h2 className="mt-2 font-display text-3xl font-semibold text-cream">
-            A tua noite começa aqui
+            O Kamba-Dyami vai até ao teu evento
           </h2>
           <Link
             href="/reservas"

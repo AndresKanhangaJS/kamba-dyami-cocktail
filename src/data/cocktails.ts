@@ -23,7 +23,12 @@ export const cocktails: Cocktail[] = [
     origin_story:
       "Inspirado nos entardeceres vistos da Ilha de Luanda, onde o céu se mistura com o mar num gradiente dourado e coral.",
     pairings: ["Camarão grelhado", "Espetadas de gindungo"],
-    images: [{ src: "/images/cocktails/luanda-sunset.jpg", alt: "Luanda Sunset servido em copo highball" }],
+    images: [
+      {
+        src: "https://images.unsplash.com/photo-1586338211598-e2d64cf97e28?auto=format&fit=crop&w=1200&q=80",
+        alt: "Luanda Sunset servido em copo highball com twist de laranja",
+      },
+    ],
     is_signature: true,
     is_seasonal: false,
     is_available: true,
@@ -52,7 +57,12 @@ export const cocktails: Cocktail[] = [
     origin_story:
       "O mukua, fruto do baobá angolano, traz um sabor terroso único que reinventa o clássico gin tónico.",
     pairings: ["Queijo de cabra", "Amêndoas torradas"],
-    images: [{ src: "/images/cocktails/mwana-pow-remix.jpg", alt: "Mwana Pow Remix em copo balão" }],
+    images: [
+      {
+        src: "https://images.unsplash.com/photo-1573624658129-3f7856192f19?auto=format&fit=crop&w=1200&q=80",
+        alt: "Mwana Pow Remix em copo balão com gelo e limão",
+      },
+    ],
     is_signature: true,
     is_seasonal: false,
     is_available: true,
@@ -81,7 +91,12 @@ export const cocktails: Cocktail[] = [
     origin_story:
       "O mel de abelha da Humpata substitui o açúcar tradicional, trazendo uma doçura profunda e africana a este clássico sour.",
     pairings: ["Chocolate amargo", "Tábua de charcutaria"],
-    images: [{ src: "/images/cocktails/kizomba-sour.jpg", alt: "Kizomba Sour em copo coupe com espuma" }],
+    images: [
+      {
+        src: "https://images.unsplash.com/photo-1713720441159-466472b29b54?auto=format&fit=crop&w=1200&q=80",
+        alt: "Kizomba Sour em copo coupe com espuma e twist de laranja",
+      },
+    ],
     is_signature: true,
     is_seasonal: false,
     is_available: true,
@@ -110,7 +125,12 @@ export const cocktails: Cocktail[] = [
     origin_story:
       "As águas azul-turquesa da Ilha de Luanda inspiraram esta receita tropical, servida nas tardes mais quentes.",
     pairings: ["Ceviche de camarão", "Frutos do mar"],
-    images: [{ src: "/images/cocktails/ilha-de-luanda.jpg", alt: "Ilha de Luanda em copo hurricane" }],
+    images: [
+      {
+        src: "https://images.unsplash.com/photo-1578664182930-39d6469c49bf?auto=format&fit=crop&w=1200&q=80",
+        alt: "Ilha de Luanda, cocktail azul tropical",
+      },
+    ],
     is_signature: false,
     is_seasonal: true,
     is_available: true,
@@ -137,9 +157,14 @@ export const cocktails: Cocktail[] = [
     difficulty: 1,
     price: 4500,
     origin_story:
-      "'Ndengue' significa pequeno em Kimbundu — um mocktail intenso apesar do nome, com o picante característico da gindungo angolana.",
+      "'Ndengue' significa pequeno em Kimbundu, mas é um mocktail intenso apesar do nome, com o picante característico da gindungo angolana.",
     pairings: ["Acaçá", "Pastéis de camarão"],
-    images: [{ src: "/images/cocktails/ndengue.jpg", alt: "Ndengue mocktail com pimenta gindungo" }],
+    images: [
+      {
+        src: "https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=1200&q=80",
+        alt: "Ndengue, mocktail vermelho com guarnição de ervas e citrinos",
+      },
+    ],
     is_signature: false,
     is_seasonal: false,
     is_available: true,
@@ -168,7 +193,12 @@ export const cocktails: Cocktail[] = [
     origin_story:
       "Um shot que combina a força da tequila com a kapuka, aguardente tradicional angolana, numa mistura sem compromissos.",
     pairings: ["Chouriço grelhado"],
-    images: [{ src: "/images/cocktails/guerrilha.jpg", alt: "Guerrilha servido em copo de shot com sal" }],
+    images: [
+      {
+        src: "https://images.unsplash.com/photo-1529671434436-8fbb37410056?auto=format&fit=crop&w=1200&q=80",
+        alt: "Guerrilha servido em copo de shot com sal e lima",
+      },
+    ],
     is_signature: false,
     is_seasonal: false,
     is_available: true,
@@ -196,7 +226,12 @@ export const cocktails: Cocktail[] = [
     price: 7200,
     origin_story: "O clássico entre os clássicos, servido como manda a tradição desde o século XIX.",
     pairings: ["Charutos", "Chocolate 70%"],
-    images: [{ src: "/images/cocktails/old-fashioned.jpg", alt: "Old Fashioned em copo baixo" }],
+    images: [
+      {
+        src: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80",
+        alt: "Old Fashioned em copo baixo com twist de laranja",
+      },
+    ],
     is_signature: false,
     is_seasonal: false,
     is_available: true,
@@ -225,12 +260,50 @@ export const cocktails: Cocktail[] = [
     origin_story:
       "O caju angolano, base tradicional de fermentação local, dá um toque frutado e ácido a este Collins reinventado.",
     pairings: ["Salada de manga verde", "Peixe grelhado"],
-    images: [{ src: "/images/cocktails/caju-collins.jpg", alt: "Caju Collins em copo alto" }],
+    images: [
+      {
+        src: "https://images.unsplash.com/photo-1766566676250-d27ef8ccdd82?auto=format&fit=crop&w=1200&q=80",
+        alt: "Caju Collins em copo alto com lima e hortelã",
+      },
+    ],
     is_signature: false,
     is_seasonal: true,
     is_available: true,
     tags: ["africa-fusion", "refrescante"],
     created_at: "2026-02-10",
+  },
+  {
+    id: "9",
+    slug: "maruvo",
+    name: "Maruvo",
+    tagline: "A tradição do norte de Angola, servida com respeito.",
+    category: "africa-fusion",
+    spirit_base: "Maruvo",
+    ingredients: [
+      { name: "Maruvo (vinho de palmeira)", quantity: "150ml" },
+      { name: "Mel silvestre", quantity: "10ml" },
+      { name: "Limão", quantity: "5ml" },
+    ],
+    method: "built",
+    garnish: "Twist de limão",
+    glassware: "Caneca de barro",
+    abv: 8,
+    difficulty: 1,
+    price: 5000,
+    origin_story:
+      "O Maruvo é a seiva fermentada da palmeira, uma bebida com séculos de história no norte de Angola, presente em casamentos, funerais e celebrações de toda a comunidade. Trazemo-lo à nossa carta como está: simples, honesto e cheio de significado, com só um toque de mel e limão para o equilibrar.",
+    pairings: ["Funge", "Peixe frito"],
+    images: [
+      {
+        src: "https://images.unsplash.com/photo-1616186761240-85710c011d82?auto=format&fit=crop&w=1200&q=80",
+        alt: "Maruvo, bebida tradicional angolana servida num copo",
+      },
+    ],
+    is_signature: false,
+    is_seasonal: false,
+    is_available: true,
+    tags: ["tradicional", "cultural", "africa-fusion"],
+    created_at: "2026-04-15",
   },
 ];
 

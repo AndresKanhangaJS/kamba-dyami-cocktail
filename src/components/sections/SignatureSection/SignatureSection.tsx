@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getSignatureCocktails } from "@/data/cocktails";
 import { Badge } from "@/components/ui/Badge";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
@@ -20,14 +21,23 @@ export function SignatureSection() {
           <ScrollReveal key={cocktail.id} delay={i * 120} className="[perspective:1200px]">
             <div className="relative h-96 w-full [transform-style:preserve-3d] transition-transform duration-700 ease-out hover:[transform:rotateY(180deg)]">
               {/* Frente */}
-              <div
-                className="absolute inset-0 flex flex-col justify-end rounded-2xl border border-mist p-6 [backface-visibility:hidden]"
-                style={{
-                  background:
-                    "linear-gradient(160deg, var(--color-smoke) 0%, var(--color-purple-night) 130%)",
-                }}
-              >
-                <Badge variant="gold" className="w-fit">
+              <div className="absolute inset-0 flex flex-col justify-end overflow-hidden rounded-2xl border border-mist p-6 [backface-visibility:hidden]">
+                <Image
+                  src={cocktail.images[0].src}
+                  alt={cocktail.images[0].alt}
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover"
+                />
+                <div
+                  aria-hidden="true"
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, transparent 25%, var(--color-obsidian) 95%)",
+                  }}
+                />
+                <Badge variant="gold" className="relative w-fit">
                   Assinatura
                 </Badge>
                 <h3 className="mt-3 font-display text-3xl font-semibold text-cream">

@@ -27,7 +27,8 @@ export function CocktailDetail({ cocktail }: { cocktail: Cocktail }) {
     <article>
       <ParallaxSection
         className="flex min-h-[60vh] flex-col items-center justify-end px-6 pb-16 pt-32 text-center"
-        backgroundClassName="bg-[linear-gradient(160deg,var(--color-purple-night)_0%,var(--color-obsidian)_75%)]"
+        backgroundImage={{ src: cocktail.images[0].src, alt: cocktail.images[0].alt }}
+        backgroundClassName="bg-[linear-gradient(180deg,rgba(10,10,15,0.35)_0%,var(--color-obsidian)_92%)]"
       >
         <div className="flex flex-wrap items-center justify-center gap-2">
           <Badge variant="gold">{categoryLabel}</Badge>

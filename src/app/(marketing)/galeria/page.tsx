@@ -4,7 +4,7 @@ import { GalleryGrid } from "./GalleryGrid";
 export const metadata: Metadata = {
   title: "Galeria",
   description:
-    "Momentos do Kamba-Dyami Cocktail: cocktails, ambiente e eventos no coração de Luanda.",
+    "Momentos do Kamba-Dyami Cocktail: cocktails, bastidores e eventos por toda Luanda.",
 };
 
 export default function GaleriaPage() {
@@ -16,7 +16,7 @@ export default function GaleriaPage() {
           Galeria
         </h1>
         <p className="mx-auto mt-3 max-w-xl font-body text-cream/70">
-          Cocktails, noites e celebrações — um vislumbre do que te espera no Kamba-Dyami.
+          Cocktails, bastidores e celebrações: um vislumbre do que te espera no Kamba-Dyami.
         </p>
       </div>
 

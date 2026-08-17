@@ -18,7 +18,7 @@ export function useReservation() {
   });
 
   const onSubmit = form.handleSubmit(async (values) => {
-    // Fase 1: sem backend — simula o pedido e confirma no cliente.
+    // Fase 1: sem backend, simula o pedido e confirma no cliente.
     await new Promise((resolve) => setTimeout(resolve, 600));
 
     setConfirmedReservation({

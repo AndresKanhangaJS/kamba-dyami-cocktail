@@ -7,6 +7,7 @@ export interface Reservation {
   phone: string;
   date: string;
   time: string;
+  location: string;
   guests: number;
   occasion?: string;
   special_requests?: string;

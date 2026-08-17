@@ -35,12 +35,18 @@ const dancingScript = Dancing_Script({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.url),
   title: {
-    default: "Kamba-Dyami Cocktail | Cocktailaria Premium em Luanda",
+    default: "Kamba-Dyami Cocktail | Cocktails para Eventos em Luanda",
     template: "%s | Kamba-Dyami",
   },
   description:
-    "O melhor bar de cocktails de Luanda. Cocktails de autor, ingredientes premium e uma experiência inesquecível no coração de Angola.",
-  keywords: ["cocktails Luanda", "bar Angola", "cocktailaria premium", "kamba dyami"],
+    "Serviço de cocktails de autor para eventos em Luanda. Levamos ingredientes premium e uma experiência inesquecível a casamentos, festas e celebrações corporativas em qualquer parte de Angola.",
+  keywords: [
+    "cocktails para eventos Luanda",
+    "bartender Angola",
+    "catering de cocktails",
+    "cocktailaria premium",
+    "kamba dyami",
+  ],
   openGraph: {
     type: "website",
     locale: "pt_AO",

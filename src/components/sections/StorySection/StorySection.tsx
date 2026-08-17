@@ -17,16 +17,17 @@ export function StorySection() {
             Raízes de Luanda, alma Kamba-Dyami
           </h2>
           <p className="mt-6 font-body text-base leading-relaxed text-cream/70">
-            Cada copo que servimos carrega um pouco de Kimbundu, da Ilha de Luanda e dos panos
-            tradicionais angolanos que inspiram os nossos padrões e cores. Não somos um bar
-            europeu — somos Luanda, à noite, com música, cor e amigos de coração.
+            Cada copo que preparamos carrega um pouco de Kimbundu e dos panos tradicionais
+            angolanos que inspiram os nossos padrões e cores. Não trazemos um conceito europeu
+            importado: levamos Luanda contigo, com música, cor e amigos de coração, esteja o teu
+            evento onde estiver.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={150} className="flex flex-col items-start gap-4">
           <blockquote className="border-l-2 border-gold-kamba pl-6 font-accent text-3xl leading-snug text-gold-kamba md:text-4xl">
-            &ldquo;Kamba-Dyami é o amigo do peito — aquele com quem partilhas os melhores
-            momentos da vida.&rdquo;
+            &ldquo;Kamba-Dyami é o amigo do peito, aquele com quem partilhas os melhores momentos
+            da vida.&rdquo;
           </blockquote>
           <p className="font-body text-sm text-cream/60">
             {founder.name} · {founder.role}

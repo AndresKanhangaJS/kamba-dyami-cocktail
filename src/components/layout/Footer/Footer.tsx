@@ -32,9 +32,10 @@ export function Footer() {
           </div>
         </div>
 
-        <p className="mt-10 border-t border-mist/60 pt-6 font-utility text-xs text-cream/40">
-          © {new Date().getFullYear()} Kamba-Dyami Cocktail. Todos os direitos reservados.
-        </p>
+        <div className="mt-10 flex flex-col gap-2 border-t border-mist/60 pt-6 font-utility text-xs text-cream/40 sm:flex-row sm:items-center sm:justify-between">
+          <p>© {new Date().getFullYear()} Kamba-Dyami Cocktail. Todos os direitos reservados.</p>
+          <p>made by {"<AVK/>"}</p>
+        </div>
       </div>
     </footer>
   );

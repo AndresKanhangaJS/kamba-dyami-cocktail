@@ -52,7 +52,7 @@ export function HeroSection() {
       </h1>
 
       <p className="mx-auto mt-6 max-w-xl text-balance font-body text-lg text-cream/70 md:text-xl">
-        Cocktailaria premium no coração de Luanda.
+        Serviço de cocktails premium para os teus eventos em Luanda.
       </p>
 
       <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

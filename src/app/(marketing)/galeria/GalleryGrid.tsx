@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ZoomIn } from "lucide-react";
 import { galleryItems, type GalleryItem } from "@/data/gallery";
 import { Modal } from "@/components/ui/Modal";
@@ -51,12 +52,25 @@ export function GalleryGrid() {
                 "group relative block w-full overflow-hidden rounded-2xl border border-mist transition-all duration-200 hover:border-coral-angola",
                 item.tall ? "h-96" : "h-56",
               )}
-              style={{ background: item.gradient }}
             >
+              <Image
+                src={item.image}
+                alt={item.caption}
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0"
+                style={{
+                  background: "linear-gradient(180deg, transparent 55%, rgba(10,10,15,0.85) 100%)",
+                }}
+              />
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-obsidian/0 opacity-0 transition-all duration-200 group-hover:bg-obsidian/50 group-hover:opacity-100">
                 <ZoomIn size={24} className="text-cream" />
               </div>
-              <p className="absolute inset-x-0 bottom-0 p-4 text-left font-body text-sm text-cream/90 [text-shadow:0_1px_4px_rgba(0,0,0,0.5)]">
+              <p className="absolute inset-x-0 bottom-0 p-4 text-left font-body text-sm text-cream/90">
                 {item.caption}
               </p>
             </button>
@@ -67,11 +81,15 @@ export function GalleryGrid() {
       <Modal isOpen={selected !== null} onClose={() => setSelected(null)}>
         {selected && (
           <div>
-            <div
-              className="h-72 w-full rounded-xl"
-              style={{ background: selected.gradient }}
-              aria-hidden="true"
-            />
+            <div className="relative h-72 w-full overflow-hidden rounded-xl">
+              <Image
+                src={selected.image}
+                alt={selected.caption}
+                fill
+                sizes="(min-width: 768px) 700px, 90vw"
+                className="object-cover"
+              />
+            </div>
             <p className="mt-4 font-display text-xl text-cream">{selected.caption}</p>
           </div>
         )}
