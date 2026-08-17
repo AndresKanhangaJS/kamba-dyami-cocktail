@@ -8,6 +8,7 @@ import {
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { SITE_CONFIG } from "@/constants/config";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -32,6 +33,7 @@ const dancingScript = Dancing_Script({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_CONFIG.url),
   title: {
     default: "Kamba-Dyami Cocktail | Cocktailaria Premium em Luanda",
     template: "%s | Kamba-Dyami",
