@@ -1,10 +1,7 @@
-import { team } from "@/data/team";
 import { ParallaxSection } from "@/components/shared/ParallaxSection";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 
 export function StorySection() {
-  const founder = team[0];
-
   return (
     <ParallaxSection
       className="px-6 py-28"
@@ -29,9 +26,6 @@ export function StorySection() {
             &ldquo;Kamba-Dyami é o amigo do peito, aquele com quem partilhas os melhores momentos
             da vida.&rdquo;
           </blockquote>
-          <p className="font-body text-sm text-cream/60">
-            {founder.name} · {founder.role}
-          </p>
         </ScrollReveal>
       </div>
     </ParallaxSection>

@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { cocktails } from "@/data/cocktails";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
-import { AnimatedNumber } from "@/components/shared/AnimatedText";
 
 export function FeaturedCocktailSection() {
   const featured = cocktails.find((c) => c.is_seasonal) ?? cocktails[0];
@@ -48,10 +47,6 @@ export function FeaturedCocktailSection() {
             </ScrollReveal>
           ))}
         </div>
-
-        <p className="mt-8 font-utility text-3xl text-cream">
-          <AnimatedNumber value={featured.price} currency />
-        </p>
 
         <Link
           href={`/menu/${featured.slug}`}

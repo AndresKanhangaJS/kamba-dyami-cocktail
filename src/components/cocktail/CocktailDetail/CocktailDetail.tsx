@@ -6,7 +6,6 @@ import { CATEGORIES } from "@/constants/categories";
 import { Badge } from "@/components/ui/Badge";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { ParallaxSection } from "@/components/shared/ParallaxSection";
-import { AnimatedNumber } from "@/components/shared/AnimatedText";
 import { ShareButtons } from "./ShareButtons";
 import { RelatedCocktails } from "./RelatedCocktails";
 
@@ -88,15 +87,6 @@ export function CocktailDetail({ cocktail }: { cocktail: Cocktail }) {
 
         <ScrollReveal delay={100}>
           <div className="flex flex-col gap-6 rounded-2xl border border-mist bg-smoke p-6">
-            <div>
-              <p className="font-utility text-xs uppercase tracking-widest text-cream/50">
-                Preço
-              </p>
-              <p className="mt-1 font-utility text-3xl text-gold-kamba">
-                <AnimatedNumber value={cocktail.price} currency />
-              </p>
-            </div>
-
             <div>
               <p className="font-utility text-xs uppercase tracking-widest text-cream/50">
                 Método

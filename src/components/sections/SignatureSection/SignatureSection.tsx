@@ -2,7 +2,6 @@ import Image from "next/image";
 import { getSignatureCocktails } from "@/data/cocktails";
 import { Badge } from "@/components/ui/Badge";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
-import { AnimatedNumber } from "@/components/shared/AnimatedText";
 
 export function SignatureSection() {
   const signatures = getSignatureCocktails();
@@ -48,7 +47,7 @@ export function SignatureSection() {
 
               {/* Verso */}
               <div
-                className="absolute inset-0 flex flex-col justify-between rounded-2xl border border-gold-kamba/40 bg-smoke p-6 [backface-visibility:hidden] [transform:rotateY(180deg)]"
+                className="absolute inset-0 flex flex-col justify-start rounded-2xl border border-gold-kamba/40 bg-smoke p-6 [backface-visibility:hidden] [transform:rotateY(180deg)]"
               >
                 <div>
                   <h4 className="font-display text-xl font-semibold text-gold-kamba">
@@ -63,9 +62,6 @@ export function SignatureSection() {
                     ))}
                   </ul>
                 </div>
-                <p className="font-utility text-2xl text-gold-kamba">
-                  <AnimatedNumber value={cocktail.price} currency />
-                </p>
               </div>
             </div>
           </ScrollReveal>

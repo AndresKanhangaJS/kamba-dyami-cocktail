@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Cocktail } from "@/types/cocktail.types";
 import { CATEGORIES } from "@/constants/categories";
-import { formatAOA } from "@/lib/utils/format";
 import { Badge } from "@/components/ui/Badge";
 
 const CATEGORY_BADGE_VARIANT: Record<string, "gold" | "coral" | "teal" | "purple"> = {
@@ -49,7 +48,6 @@ export function CocktailCard({ cocktail }: { cocktail: Cocktail }) {
       <div className="relative flex flex-col gap-1 p-6">
         <h3 className="font-display text-2xl font-semibold text-cream">{cocktail.name}</h3>
         <p className="font-body text-sm text-cream/70">{cocktail.tagline}</p>
-        <p className="mt-2 font-utility text-gold-kamba">{formatAOA(cocktail.price)}</p>
       </div>
 
       <div className="absolute inset-0 flex flex-col justify-end bg-obsidian/90 p-6 opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100">

@@ -2,18 +2,8 @@
 
 import { Search, Star, X } from "lucide-react";
 import { CATEGORIES, SPIRIT_BASES } from "@/constants/categories";
-import { formatAOA } from "@/lib/utils/format";
-import { PRICE_RANGE_BOUNDS, useUiStore } from "@/stores/ui.store";
+import { useUiStore } from "@/stores/ui.store";
 import { cn } from "@/lib/utils/cn";
-
-const THUMB_CLASSES =
-  "pointer-events-none absolute inset-x-0 top-1/2 h-1 w-full -translate-y-1/2 appearance-none bg-transparent " +
-  "[&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 " +
-  "[&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-gold-kamba " +
-  "[&::-webkit-slider-thumb]:cursor-pointer [&::-webkit-slider-thumb]:shadow-sm " +
-  "[&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 " +
-  "[&::-moz-range-thumb]:appearance-none [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-gold-kamba " +
-  "[&::-moz-range-thumb]:cursor-pointer [&::-moz-range-thumb]:border-0";
 
 function FilterToggle({
   active,
@@ -45,23 +35,18 @@ export function CocktailFilter() {
   const categories = useUiStore((s) => s.categories);
   const spiritBases = useUiStore((s) => s.spiritBases);
   const difficulties = useUiStore((s) => s.difficulties);
-  const priceRange = useUiStore((s) => s.priceRange);
   const search = useUiStore((s) => s.search);
   const toggleCategory = useUiStore((s) => s.toggleCategory);
   const toggleSpiritBase = useUiStore((s) => s.toggleSpiritBase);
   const toggleDifficulty = useUiStore((s) => s.toggleDifficulty);
-  const setPriceRange = useUiStore((s) => s.setPriceRange);
   const setSearch = useUiStore((s) => s.setSearch);
   const resetFilters = useUiStore((s) => s.resetFilters);
 
-  const [minBound, maxBound] = PRICE_RANGE_BOUNDS;
   const hasActiveFilters =
     categories.length > 0 ||
     spiritBases.length > 0 ||
     difficulties.length > 0 ||
-    search.trim() !== "" ||
-    priceRange[0] !== minBound ||
-    priceRange[1] !== maxBound;
+    search.trim() !== "";
 
   const activeChips: { label: string; onRemove: () => void }[] = [
     ...categories.map((c) => ({
@@ -77,13 +62,6 @@ export function CocktailFilter() {
 
   if (search.trim() !== "") {
     activeChips.push({ label: `"${search}"`, onRemove: () => setSearch("") });
-  }
-
-  if (priceRange[0] !== minBound || priceRange[1] !== maxBound) {
-    activeChips.push({
-      label: `${formatAOA(priceRange[0])} – ${formatAOA(priceRange[1])}`,
-      onRemove: () => setPriceRange(PRICE_RANGE_BOUNDS),
-    });
   }
 
   return (
@@ -151,49 +129,6 @@ export function CocktailFilter() {
               </span>
             </FilterToggle>
           ))}
-        </div>
-      </div>
-
-      <div>
-        <div className="flex items-center justify-between">
-          <p className="font-utility text-xs uppercase tracking-widest text-cream/50">Preço</p>
-          <p className="font-utility text-xs text-cream/60">
-            {formatAOA(priceRange[0])} – {formatAOA(priceRange[1])}
-          </p>
-        </div>
-        <div className="relative mt-4 h-6">
-          <div className="absolute inset-x-0 top-1/2 h-1 -translate-y-1/2 rounded-full bg-mist" />
-          <div
-            className="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-gold-kamba"
-            style={{
-              left: `${((priceRange[0] - minBound) / (maxBound - minBound)) * 100}%`,
-              right: `${100 - ((priceRange[1] - minBound) / (maxBound - minBound)) * 100}%`,
-            }}
-          />
-          <input
-            type="range"
-            min={minBound}
-            max={maxBound}
-            step={100}
-            value={priceRange[0]}
-            onChange={(e) =>
-              setPriceRange([Math.min(Number(e.target.value), priceRange[1] - 100), priceRange[1]])
-            }
-            aria-label="Preço mínimo"
-            className={THUMB_CLASSES}
-          />
-          <input
-            type="range"
-            min={minBound}
-            max={maxBound}
-            step={100}
-            value={priceRange[1]}
-            onChange={(e) =>
-              setPriceRange([priceRange[0], Math.max(Number(e.target.value), priceRange[0] + 100)])
-            }
-            aria-label="Preço máximo"
-            className={THUMB_CLASSES}
-          />
         </div>
       </div>
 

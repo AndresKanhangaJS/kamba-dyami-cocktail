@@ -8,7 +8,6 @@ export function useCocktailFilter() {
   const categories = useUiStore((s) => s.categories);
   const spiritBases = useUiStore((s) => s.spiritBases);
   const difficulties = useUiStore((s) => s.difficulties);
-  const priceRange = useUiStore((s) => s.priceRange);
   const search = useUiStore((s) => s.search);
 
   return useMemo(() => {
@@ -18,7 +17,6 @@ export function useCocktailFilter() {
       if (categories.length > 0 && !categories.includes(cocktail.category)) return false;
       if (spiritBases.length > 0 && !spiritBases.includes(cocktail.spirit_base)) return false;
       if (difficulties.length > 0 && !difficulties.includes(cocktail.difficulty)) return false;
-      if (cocktail.price < priceRange[0] || cocktail.price > priceRange[1]) return false;
 
       if (query) {
         const haystack = [
@@ -32,5 +30,5 @@ export function useCocktailFilter() {
 
       return true;
     });
-  }, [categories, spiritBases, difficulties, priceRange, search]);
+  }, [categories, spiritBases, difficulties, search]);
 }
