@@ -15,7 +15,7 @@ export function SignatureSection() {
         </h2>
       </ScrollReveal>
 
-      <div className="mt-14 grid gap-8 md:grid-cols-3">
+      <div className="mt-14 grid gap-8 md:grid-cols-2">
         {signatures.map((cocktail, i) => (
           <ScrollReveal key={cocktail.id} delay={i * 120} className="[perspective:1200px]">
             <div className="relative h-96 w-full [transform-style:preserve-3d] transition-transform duration-700 ease-out hover:[transform:rotateY(180deg)]">
@@ -50,7 +50,10 @@ export function SignatureSection() {
                 className="absolute inset-0 flex flex-col justify-start rounded-2xl border border-gold-kamba/40 bg-smoke p-6 [backface-visibility:hidden] [transform:rotateY(180deg)]"
               >
                 <div>
-                  <h4 className="font-display text-xl font-semibold text-gold-kamba">
+                  <h3 className="font-display text-2xl font-semibold text-cream">
+                    {cocktail.name}
+                  </h3>
+                  <h4 className="mt-3 font-display text-xl font-semibold text-gold-kamba">
                     Ingredientes
                   </h4>
                   <ul className="mt-3 flex flex-col gap-1.5 font-body text-sm text-cream/80">
