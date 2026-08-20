@@ -295,8 +295,8 @@ export const cocktails: Cocktail[] = [
     pairings: ["Funge", "Peixe frito"],
     images: [
       {
-        src: "https://images.unsplash.com/photo-1604867352925-3bc5078721a9?auto=format&fit=crop&w=1200&q=80",
-        alt: "Maruvo a ser servido de um jarro de barro tradicional",
+        src: "https://images.unsplash.com/photo-1579585381306-240cc44c6a66?auto=format&fit=crop&w=1200&q=80",
+        alt: "Maruvo, uma bebida turva e esbranquiçada, servido num copo simples",
       },
     ],
     is_signature: false,
