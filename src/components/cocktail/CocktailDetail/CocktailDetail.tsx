@@ -65,24 +65,6 @@ export function CocktailDetail({ cocktail }: { cocktail: Cocktail }) {
             </h2>
             <p className="mt-4 font-body leading-relaxed text-cream/80">{cocktail.origin_story}</p>
           </ScrollReveal>
-
-          {cocktail.pairings.length > 0 && (
-            <ScrollReveal>
-              <h2 className="font-display text-2xl font-semibold text-gold-kamba">
-                Harmonizações Sugeridas
-              </h2>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {cocktail.pairings.map((pairing) => (
-                  <span
-                    key={pairing}
-                    className="rounded-full border border-mist px-4 py-2 font-body text-sm text-cream/80"
-                  >
-                    {pairing}
-                  </span>
-                ))}
-              </div>
-            </ScrollReveal>
-          )}
         </div>
 
         <ScrollReveal delay={100}>

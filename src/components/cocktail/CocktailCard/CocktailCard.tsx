@@ -1,8 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { Cocktail } from "@/types/cocktail.types";
 import { CATEGORIES } from "@/constants/categories";
 import { Badge } from "@/components/ui/Badge";
+import { cn } from "@/lib/utils/cn";
 
 const CATEGORY_BADGE_VARIANT: Record<string, "gold" | "coral" | "teal" | "purple"> = {
   assinatura: "gold",
@@ -15,10 +19,20 @@ const CATEGORY_BADGE_VARIANT: Record<string, "gold" | "coral" | "teal" | "purple
 
 export function CocktailCard({ cocktail }: { cocktail: Cocktail }) {
   const categoryLabel = CATEGORIES.find((c) => c.value === cocktail.category)?.label ?? cocktail.category;
+  const [revealed, setRevealed] = useState(false);
+
+  function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    const canHover = typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
+    if (!canHover && !revealed) {
+      e.preventDefault();
+      setRevealed(true);
+    }
+  }
 
   return (
     <Link
       href={`/menu/${cocktail.slug}`}
+      onClick={handleClick}
       className="group relative flex h-80 flex-col justify-end overflow-hidden rounded-2xl border border-mist transition-all duration-200 ease-out hover:scale-[1.03] hover:border-coral-angola"
     >
       <Image
@@ -50,7 +64,12 @@ export function CocktailCard({ cocktail }: { cocktail: Cocktail }) {
         <p className="font-body text-sm text-cream/70">{cocktail.tagline}</p>
       </div>
 
-      <div className="absolute inset-0 flex flex-col justify-end bg-obsidian/90 p-6 opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100">
+      <div
+        className={cn(
+          "absolute inset-0 flex flex-col justify-end bg-obsidian/90 p-6 opacity-0 transition-opacity duration-200 ease-out group-hover:opacity-100",
+          revealed && "opacity-100"
+        )}
+      >
         <p className="font-utility text-xs uppercase tracking-widest text-gold-kamba">
           Ingredientes principais
         </p>
