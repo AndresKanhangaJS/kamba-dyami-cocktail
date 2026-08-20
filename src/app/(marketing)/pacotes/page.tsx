@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BadgeCheck, CheckCircle2, Clock, GlassWater, UserCog, Users } from "lucide-react";
+import { BadgeCheck, CheckCircle2, Clock, UserCog, Users } from "lucide-react";
 import { eventPackages, PACKAGE_ADD_ONS } from "@/data/packages";
 import { formatAOA } from "@/lib/utils/format";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
@@ -15,8 +15,7 @@ export const metadata: Metadata = {
 const ICON_ITEMS = (pkg: (typeof eventPackages)[number]) => [
   { icon: Users, label: pkg.guests },
   { icon: Clock, label: pkg.duration },
-  { icon: UserCog, label: pkg.bartenders },
-  { icon: GlassWater, label: pkg.drinkOptions },
+  { icon: UserCog, label: pkg.team },
 ];
 
 export default function PacotesPage() {

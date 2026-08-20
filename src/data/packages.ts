@@ -5,8 +5,7 @@ export interface EventPackage {
   priceFrom: number;
   guests: string;
   duration: string;
-  bartenders: string;
-  drinkOptions: string;
+  team: string;
   features: string[];
   highlight?: boolean;
 }
@@ -15,17 +14,18 @@ export const eventPackages: EventPackage[] = [
   {
     id: "essencial",
     name: "Essencial",
-    tagline: "Para festas íntimas e reuniões pequenas.",
+    tagline: "Para festas íntimas e reuniões privadas.",
     priceFrom: 180000,
     guests: "Até 30 convidados",
     duration: "3 horas de serviço",
-    bartenders: "1 bartender Kamba-Dyami",
-    drinkOptions: "4 cocktails + 1 mocktail à escolha",
+    team: "Equipa Kamba-Dyami",
     features: [
-      "Equipamento completo (shakers, copos, gelo, guarnições)",
-      "Carta reduzida com cocktails de assinatura e clássicos",
-      "1 opção sem álcool sempre disponível",
-      "Montagem e desmontagem incluídas",
+      "Reunião de verificação antes do evento",
+      "Bar completo montado no local, com equipamento, refrigeração e gelo",
+      "Sumos naturais, xaropes artesanais, guarnições frescas e copos de shots",
+      "Carta de assinaturas e clássicos, definida contigo",
+      "Opções sem álcool disponíveis",
+      "Montagem, serviço e desmontagem incluídos",
     ],
   },
   {
@@ -35,40 +35,37 @@ export const eventPackages: EventPackage[] = [
     priceFrom: 350000,
     guests: "Até 80 convidados",
     duration: "4 horas de serviço",
-    bartenders: "2 bartenders Kamba-Dyami",
-    drinkOptions: "6 cocktails + 2 mocktails à escolha",
+    team: "Equipa Kamba-Dyami",
     features: [
       "Tudo o que está incluído no Essencial",
-      "Welcome drink de boas-vindas para os convidados",
+      "Welcome drink servido à chegada dos convidados",
       "Carta completa: assinaturas, clássicos e África Fusion",
-      "Consultoria de menu à medida da ocasião",
-      "Guarnições e copos temáticos Kamba-Dyami",
+      "Brinde de copos/canecas personalizadas Kamba-Dyami",
+      "Serviço volante de shots em bandeja pela sala",
     ],
     highlight: true,
   },
   {
     id: "dyami-prime",
     name: "Dyami Prime",
-    tagline: "Para casamentos, eventos corporativos e celebrações grandes.",
+    tagline: "Para casamentos, eventos corporativos e grandes celebrações.",
     priceFrom: 650000,
     guests: "80 a 150+ convidados",
     duration: "5 horas de serviço",
-    bartenders: "3 ou mais bartenders Kamba-Dyami",
-    drinkOptions: "Carta completa + 1 cocktail assinado só para o teu evento",
+    team: "Equipa Kamba-Dyami",
     features: [
       "Tudo o que está incluído no Kamba",
       "Cocktail exclusivo criado e nomeado para a ocasião",
-      "Preparação ao vivo em frente aos convidados",
-      "Coordenador de evento dedicado no dia",
-      "Glassware premium e montagem personalizada",
+      "Segundo ponto de bar para servir sem filas de espera",
     ],
   },
 ];
 
 export const PACKAGE_ADD_ONS = [
   "Hora extra de serviço",
-  "Bartender adicional",
+  "Reforço de equipa para eventos maiores",
   "Mocktail bar dedicado (100% sem álcool)",
   "Estação de espresso martini",
   "Menu totalmente personalizado com ingredientes à escolha",
+  "Deslocação para eventos fora de Luanda",
 ];
