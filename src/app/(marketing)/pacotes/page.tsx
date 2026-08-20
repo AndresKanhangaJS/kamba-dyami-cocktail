@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BadgeCheck, CheckCircle2, Clock, UserCog, Users } from "lucide-react";
 import { eventPackages, PACKAGE_ADD_ONS } from "@/data/packages";
-import { formatAOA } from "@/lib/utils/format";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { cn } from "@/lib/utils/cn";
 
@@ -28,8 +27,8 @@ export default function PacotesPage() {
         </h1>
         <p className="mx-auto mt-3 max-w-2xl font-body text-cream/70">
           Cada pacote inclui cocktails e mocktails, para que todos os convidados, com ou sem
-          álcool, tenham uma carta à altura da ocasião. Os valores são um ponto de partida: o
-          orçamento final depende do número de convidados, duração e local do evento.
+          álcool, tenham uma carta à altura da ocasião. O orçamento é feito à medida e depende
+          do número de convidados, da duração e do local do evento.
         </p>
       </div>
 
@@ -54,15 +53,6 @@ export default function PacotesPage() {
               <div>
                 <h2 className="font-display text-2xl font-semibold text-cream">{pkg.name}</h2>
                 <p className="mt-1 font-body text-sm text-cream/60">{pkg.tagline}</p>
-              </div>
-
-              <div>
-                <p className="font-utility text-xs uppercase tracking-widest text-cream/50">
-                  A partir de
-                </p>
-                <p className="mt-1 font-utility text-3xl text-gold-kamba">
-                  {formatAOA(pkg.priceFrom)}
-                </p>
               </div>
 
               <ul className="flex flex-col gap-2">

@@ -2,7 +2,6 @@ export interface EventPackage {
   id: string;
   name: string;
   tagline: string;
-  priceFrom: number;
   guests: string;
   duration: string;
   team: string;
@@ -15,7 +14,6 @@ export const eventPackages: EventPackage[] = [
     id: "essencial",
     name: "Essencial",
     tagline: "Para festas íntimas e reuniões privadas.",
-    priceFrom: 180000,
     guests: "Até 30 convidados",
     duration: "3 horas de serviço",
     team: "Equipa Kamba-Dyami",
@@ -32,7 +30,6 @@ export const eventPackages: EventPackage[] = [
     id: "kamba",
     name: "Kamba",
     tagline: "O nosso pacote mais popular, para festas que enchem a casa.",
-    priceFrom: 350000,
     guests: "Até 80 convidados",
     duration: "4 horas de serviço",
     team: "Equipa Kamba-Dyami",
@@ -49,7 +46,6 @@ export const eventPackages: EventPackage[] = [
     id: "dyami-prime",
     name: "Dyami Prime",
     tagline: "Para casamentos, eventos corporativos e grandes celebrações.",
-    priceFrom: 650000,
     guests: "80 a 150+ convidados",
     duration: "5 horas de serviço",
     team: "Equipa Kamba-Dyami",
